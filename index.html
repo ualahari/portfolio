@@ -1,99 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | ASRITHA LAHARI .U</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffeb6b78, #ff7c6bfa);
-            color: black;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: grey;
-            padding: 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav a {
-            color: blue;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 50px;
-            text-align: center;
-        }
-        .project-card {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-            width: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-        footer {
-            background: grey;
-            text-align: center;
-            padding: 10px;
-            position: auto;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Asritha Lahari</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: rgb(206, 223, 238);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: slategray;
+      color: rgb(206, 223, 238);
+      padding: 30px 0;
+      text-align: center;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #f0f0f5;
+      padding: 15px 0;
+      font-size: 1.2rem;
+    }
+    nav ul li {
+      margin: 0 25px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #6c63ff;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1{
+        margin-bottom: 20px;
+        color:rgb(206, 223, 238);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #444;
+    }
+    .bio, .education, .projects, .contact {
+      background: white;
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideFadeIn 1s ease forwards;
+    }
+    @keyframes slideFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .bio-content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .profile-img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    .bio-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .project-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: #eef1fc;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      animation: slideFadeIn 1s ease forwards;
+    }
+
+    .project-card img {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .project-card img:hover {
+      transform: scale(1.03);
+    }
+
+    .project-card div {
+      flex: 1;
+    }
+
+    footer {
+      background: slategray;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .bio-content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-img {
+        margin: 20px 0;
+      }
+      .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .project-card img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>ASRITHA LAHARI .U</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello,I am Asritha Lahari.I am pursing computer science engineering in vellore institute of technology,vellore and am passionate about technology, programming, and societal advancements. I enjoy working on projects that combine technical skills with real-world applications.</p>
-    </section>
-    <hr><hr>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>DSD Miniproject on Elevator Control System</h3>
-            <p>Designed and implemented a digital system for an elevator control mechanism using Verilog.</p>
-        </div>
-        <div class="project-card">
-            <h3>Python Article on Oil Spillage in Marine Ocean</h3>
-            <p>Analyzed the impact of oil spills using Python-based data analysis and visualization techniques.</p>
-        </div>
-        <div class="project-card">
-            <h3>Presentation on Science, Technology, and Society in Sociology</h3>
-            <p>Explored the interconnections between scientific advancements, technological progress, and their impact on society.</p>
-        </div>
-    </section>
-    <hr><hr>
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p>Email:uppalapati.asritha2023@vitstudent.ac.in</p>
-        <p>Mobile number:9577727775</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Asritha Lahari All rights reserved.</p>
-    </footer>
+
+  <header>
+    <h1>ASRITHA LAHARI .U</h1>
+    <p>Computer Science Engineering Student | VIT Vellore</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#bio">Introduction</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="bio" class="bio">
+    <h2>Introduction</h2>
+    <div class="bio-content">
+      <img src="C:\Users\uasri\OneDrive\Pictures\picture.jpg" alt="Asritha Lahari" class="profile-img" />
+      <div class="bio-text">
+        <p>I'm Asritha Lahari, a passionate Computer Science Engineering student at VIT Vellore with an interest in software development and innovative technology. I enjoy solving real-world problems using creative approaches and love exploring how technology shapes society. My goal is to contribute meaningfully to the tech world while staying grounded in ethical innovation and continuous learning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech in Computer Science Engineering</strong><br>
+      Vellore Institute of Technology, Vellore<br>
+      Expected Graduation: 2027</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <img src="C:\Users\uasri\Downloads\dsd.png" alt="Elevator Control System">
+      <div>
+        <h3>DSD Mini Project - Elevator Control System</h3>
+        <p>Designed and implemented a digital elevator control system using Verilog.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="C:\Users\uasri\Downloads\oil.jpg" alt="Oil Spill Data">
+      <div>
+        <h3>Python Article - Oil Spillage in Marine Ocean</h3>
+        <p>Analyzed the environmental impact of oil spills using Python data analysis tools.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="C:\Users\uasri\Downloads\sociology.jpg" alt="STS Presentation">
+      <div>
+        <h3>STS Presentation - Science, Technology, and Society</h3>
+        <p>Explored the connection between scientific advancements, tech progress, and social impact.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="C:\Users\uasri\Downloads\aws.png" alt="AWS Preparation">
+      <div>
+        <h3>Amazon Web Services - AWS</h3>
+        <p>I am currently preparing for my AWS exam and learning cloud concepts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:uppalapati.asritha2023@vitstudent.ac.in">uppalapati.asritha2023@vitstudent.ac.in</a></p>
+    <p>Mobile: 9577727775</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Asritha Lahari. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
